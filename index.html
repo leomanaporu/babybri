@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 5th Monthsary, My Love ❤️</title>
+  
+  <!-- Romantic Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Hearts Background Canvas -->
+  <canvas id="heartsCanvas"></canvas>
+
+  <div class="sunflowers" aria-hidden="true">
+    <div class="sunflower sunflower-one">
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="center"></span>
+    </div>
+    <div class="sunflower sunflower-two">
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="center"></span>
+    </div>
+    <div class="sunflower sunflower-three">
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span>
+      <span class="center"></span>
+    </div>
+  </div>
+
+  <!-- Sticky Music Player Pill -->
+  <div class="music-player-pill" id="musicPlayer">
+    <div class="disc-icon" id="discIcon">
+      <span>🎵</span>
+    </div>
+    <div class="music-info">
+      <span class="music-title" id="musicTitle">Monday Afternoon &bull; Dionela</span>
+      <span class="music-sub" id="musicStatus">Click play for our song</span>
+    </div>
+    <button class="play-btn" id="playBtn" aria-label="Play/Pause Music">
+      <svg id="playIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <svg id="pauseIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+    <audio id="bgMusic" loop preload="auto" autoplay src="assets/music/Monday Afternoon.mp3">
+      <source src="assets/music/Monday Afternoon.mp3" type="audio/mpeg">
+      <source src="Monday Afternoon.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- Main Hero Section -->
+  <header class="hero-section">
+    <div class="hero-badge">
+      <span class="sparkle">✨</span>
+      <span>CHAPTER FIVE &bull; 5 MONTHS OF US</span>
+      <span class="sparkle">✨</span>
+    </div>
+
+    <h1 class="hero-title">Happy 5th Monthsary,<br><span class="hero-cursive">My Beautiful Baby Girl</span></h1>
+    
+    <p class="hero-subtitle">
+      Five months na halos linggo linggong tampuhan, toyo-an, kurutan at pagmamahalan.
+    </p>
+
+    <!-- Live Anniversary Time Counter -->
+    <div class="counter-container">
+      <div class="counter-label">WE HAVE BEEN TOGETHER FOR</div>
+      <div class="countdown-grid" id="timerGrid">
+        <div class="time-card">
+          <span class="time-num" id="daysCount">150</span>
+          <span class="time-unit">Days</span>
+        </div>
+        <div class="time-card">
+          <span class="time-num" id="hoursCount">00</span>
+          <span class="time-unit">Hours</span>
+        </div>
+        <div class="time-card">
+          <span class="time-num" id="minsCount">00</span>
+          <span class="time-unit">Mins</span>
+        </div>
+        <div class="time-card">
+          <span class="time-num" id="secsCount">00</span>
+          <span class="time-unit">Secs</span>
+        </div>
+      </div>
+      <div class="counter-subtext">...and every second with you has been a blessing.</div>
+    </div>
+
+    <!-- Quick Navigation CTA -->
+    <div class="hero-actions">
+      <a href="#letterSection" class="btn-primary">
+        <span>Read My Love Letter</span>
+        <span class="btn-heart">💌</span>
+      </a>
+      <a href="#gallerySection" class="btn-secondary">
+        <span>Our Memories</span>
+        <span class="btn-heart">📸</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Interactive Love Letter Section -->
+  <section class="section-container" id="letterSection">
+    <div class="section-header">
+      <span class="section-badge">WRITTEN FROM MY HEART</span>
+      <h2 class="section-title">My Message For You</h2>
+      <p class="section-desc">Click the wax seal below to unfold my letter...</p>
+    </div>
+
+    <div class="envelope-wrapper">
+      <div class="envelope" id="envelopeCard">
+        <!-- Envelope Front Flap -->
+        <div class="envelope-flap" id="envelopeFlap"></div>
+        <div class="wax-seal" id="waxSeal" title="Click to Open Letter">
+          <span>❤️</span>
+          <small>OPEN</small>
+        </div>
+
+        <!-- The Letter Sheet -->
+        <div class="letter-paper" id="letterPaper">
+          <div class="letter-header">
+            <div class="letter-date" id="letterDateDisplay">Our 5th Monthsary</div>
+            <div class="letter-salutation">My Dearest Baby,</div>
+          </div>
+          
+          <div class="letter-body">
+            <p>
+              Hi Babygirl ko, Goodmorning, afternoon, or evening, ay basta idk kung anong oras mo to mababasa or kailan but, [Advanced] Happy Monthsarry satin if earlier mo to makikita, if di naman Happy Monthsarry BABYYGIRLL KOOOOOOOOOOO!!!!!!
+            </p>
+            <p>
+              Cant believe na tumagal tayo ng ganto hehe, Una sa lahat gusto kong mag thankyou dahil nandyaan ka pa, at nandiyan ka palagi para sa akin at sa atin. Thankyou sa mga oras na binibigay mo pag may problema ako sa bahay or any personal problems na iniinda, Thankyou sa lahat-lahat baby, sa pagiintindi, sa pagtanggap sa akin, sa pag asikaso pag nasa bahay nyo me and EVEERYYTHINGGG, maraming salamat Baby.
+            </p>
+            <p>
+              Gusto kong magsorry dahil ito lang yung Monthsarry gift ko sayo and yung box, diko alam kung anong una mong makikita but yea HAHAHA oo may box. Sorry po sa mga away nating dalawa, sa mga panahon na ako yung rason ng dahilan ng pag aaway natin at tampuhan. Sorry dahil medyo nagiging inconsistent nanaman ako at medyo nawawalan ng effort, now ko lang sasabihin but, madami din kasi akong iniisip these past few days, This is made on Oct 29 btw. Sorry dahil madami tayong tampuhan at limited lang yung mga bagay na kaya kong ibigay sa sayo, someday baby, promise ko sayo, pag nagkarooon ng steady income, you'll get more than this, more massive than this. Sorry sa lahat baby and sana maintindihan mo ako Pagpasensyahan mo na.
+            </p>
+            <p>
+              Wish ko sana Gabayan tayo ni Lord sa Relationshipnatin at sana mas makilala pa natin sya at maging center sya ng Relationship natin, hiling ko na sana maging maayos tayong dalawa, mag improve, mag mature, and maunawaan sa tuwing may isang taong lowbat o di kaya naman pagod sa maghapon. Punan sana natin ang isat isa sa tuwing ang isa ay may kulang. Wag sana natin sabayan ang isa pag may isa sa atin ang galit or nagtatampo. Sana mas maging mas matatag pa tayo, i dont know baby but im starting to love God again simula nung naging tayo, at gusto kong dalhin siya sayo gusto kong maranasan mo rin yung mga Miracles and Testimonies na naranasan ko sa kanya, alam kong kahit papaano ay may kaunting curiosity kadin naman about sa kanya at paniniwala. Sana hindi natin sukuan ang isat isa, Sana maging tayo habang buhay at tuluyang legal na magkasintahan, Makapagpakasal at magka anak, silo Kento Midori at Julius ang ating fantasy na mga anak hehe.
+            </p>
+            <p>
+              Wala eh talagang disidido na talaga ako sayo, talagang talagang talagang talagang talaga naman ay binago mo ang buhay ko baby in general. Anyways yon, sana makamit natin ang pangarap natin nang magkahawak yung kamay natin, na tayo parin ang magkasama, I want you to be my last Babygirl ko, alam kong hindi ako ang the best Boyfriend, but for you kakayanin ko, natin, na gawin ang lahat para sa isat isa at sa ikabubuti nang lahat. May we found everlasting love in eternity. I love you baby, higit pa sa sobra :). Happy 5th Monthsarry Brianne ko.
+            </p>
+          </div>
+
+          <div class="letter-footer">
+            <div class="letter-closing">Forever &amp; Always Yours,</div>
+            <div class="letter-signature">Your Boyfriend ❤️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section (Polaroid Style) -->
+  <section class="section-container" id="gallerySection">
+    <div class="section-header">
+      <span class="section-badge">MEMORIES FROZEN IN TIME</span>
+      <h2 class="section-title">Our Sweetest Moments</h2>
+      <p class="section-desc">Click any photo to view full size, or upload new ones directly!</p>
+    </div>
+
+    <!-- Quick Photo Uploader Pill -->
+    <div class="gallery-toolbar">
+      <label class="upload-btn" for="photoInput">
+        <span>📸 Add / Change Photos</span>
+      </label>
+      <input type="file" id="photoInput" accept="image/*" multiple style="display:none;">
+      <span class="upload-hint">You can also drop images into <code>assets/images/</code></span>
+    </div>
+
+    <!-- Polaroid Grid with All 9 Real Photos -->
+    <div class="polaroid-grid" id="polaroidGrid">
+      <!-- Photo 1 -->
+      <div class="polaroid-card" style="--rotation: -2.5deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="02761b0f-4c67-4b6e-bd06-5c2572fe3d0c.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB 💕</div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="polaroid-card" style="--rotation: 2deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="0422d211-3caf-4120-961f-f70428f62659.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB 🌸</div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="polaroid-card" style="--rotation: -1.5deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="048c94be-32e3-4a4d-9e72-ce09cbe45234.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB ✨</div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="polaroid-card" style="--rotation: 3deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="1abf61b6-ace1-4438-b703-5617f8d9b161.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB 💫</div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="polaroid-card" style="--rotation: -3deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="265055b0-8fb4-496f-924a-64f0b0c83bf0.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB 💖</div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="polaroid-card" style="--rotation: 1.8deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="3199d467-62fe-4c1a-ad4c-aff3e699997b.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB 🌷</div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="polaroid-card" style="--rotation: -2deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="a6fbd551-7099-4898-ac80-6e36444172a0.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB 🤍</div>
+      </div>
+
+      <!-- Photo 8 -->
+      <div class="polaroid-card" style="--rotation: 2.5deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="ca6cb7f5-ead2-41c1-bf7f-419c915ec6a9.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB ✨</div>
+      </div>
+
+      <!-- Photo 9 -->
+      <div class="polaroid-card" style="--rotation: -1deg;">
+        <div class="pin">📌</div>
+        <div class="photo-frame">
+          <img src="da4aab62-7750-49c3-9357-052ea53d7b6a.jpg" alt="Bonding sa SMB" class="gallery-img">
+        </div>
+        <div class="polaroid-caption">Bonding sa SMB 💍❤️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Moments Reel -->
+  <section class="section-container" id="videoSection">
+    <div class="section-header">
+      <span class="section-badge">VIDEO RECAP</span>
+      <h2 class="section-title">Moments in Motion</h2>
+      <p class="section-desc">Special clips and videos of our favorite memories.</p>
+    </div>
+
+    <div class="video-card-container">
+      <div class="video-frame">
+        <video id="coupleVideo" controls playsinline poster="d5ccaac9-187d-4640-9272-a75ca19417c8.jpg">
+          <source src="d5ccaac9-187d-4640-9272-a75ca19417c8.mp4" type="video/mp4">
+          <source src="assets/videos/d5ccaac9-187d-4640-9272-a75ca19417c8.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-caption">
+        <h3>"Every moment with you feels like a movie scene."</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reasons Why I Love You (Interactive Flip Cards) -->
+  <section class="section-container" id="reasonsSection">
+    <div class="section-header">
+      <span class="section-badge">FROM MY HEART</span>
+      <h2 class="section-title">Reasons Why I Fall For You</h2>
+      <p class="section-desc">Tap each card to flip and reveal a secret reason!</p>
+    </div>
+
+    <div class="reasons-grid">
+      <!-- Card 1 -->
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="card-icon">😊</span>
+            <h4>Bright Smile</h4>
+            <small>Tap to flip</small>
+          </div>
+          <div class="flip-back">
+            <p>Your smile lights up my whole world, even on the days I'm feeling tired or stressed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="card-icon">💎</span>
+            <h4>Gorgeous</h4>
+            <small>Tap to flip</small>
+          </div>
+          <div class="flip-back">
+            <p>You are absolutely stunning — inside and out. I fall for you all over again every time I see you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="card-icon">🥰</span>
+            <h4>Cute</h4>
+            <small>Tap to flip</small>
+          </div>
+          <div class="flip-back">
+            <p>Everything you do is so cute — the way you laugh, pout, and even the smallest things you do melt my heart.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="card-icon">🫂</span>
+            <h4>Clingy</h4>
+            <small>Tap to flip</small>
+          </div>
+          <div class="flip-back">
+            <p>I love how you always want to be close to me. Your clinginess makes me feel so loved and needed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="card-icon">💖</span>
+            <h4>Caring</h4>
+            <small>Tap to flip</small>
+          </div>
+          <div class="flip-back">
+            <p>You care so genuinely for the people you love. Your kindness and warmth inspire me every single day.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="card-icon">🌹</span>
+            <h4>Just Being You</h4>
+            <small>Tap to flip</small>
+          </div>
+          <div class="flip-back">
+            <p>I love everything about you — the silly moments, the deep moments, and everything in between. Never change.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Grand Finale: Celebration Confetti -->
+  <section class="section-container finale-section">
+    <div class="finale-card">
+      <div class="finale-heart">💖</div>
+      <h2>Here's to Month 5 and to Many More Years Together!</h2>
+      <p>Will you continue to be my girl, my best friend, and my favorite adventure?</p>
+      
+      <div class="finale-buttons">
+        <button class="btn-love" id="celebrateBtn">
+          <span>YES! Happy Monthsary! 🎉</span>
+        </button>
+      </div>
+
+      <div class="secret-message" id="secretMessage">
+        <p>I love you more than words could ever describe, now and always! ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <span class="close-lightbox" id="closeLightbox">&times;</span>
+    <img src="" alt="Enlarged photo" class="lightbox-img" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="romantic-footer">
+    <p>Crafted with endless love for our 5th Monthsary 💕</p>
+    <small>Alabyu Bibigirl kueh</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
